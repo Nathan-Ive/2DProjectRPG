@@ -3,34 +3,29 @@ using UnityEngine;
 public class PlayerInput : MonoBehaviour
 {
 
-
-    private void Start()
-    {
-        
-    }
-
+    [SerializeField] PlayerMovement _playerMovement;
 
     private void Update()
     {
 
         if (Input.GetKey(KeyCode.W)) 
         {
-            print("up");
+            _playerMovement.MovePlayer(Vector2.up);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            print("left");
+            _playerMovement.MovePlayer(Vector2.left);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            print("down");
+            _playerMovement.MovePlayer(Vector2.down);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            print("right");
+            _playerMovement.MovePlayer(Vector2.right);
         }
 
 
